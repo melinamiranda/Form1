@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BirthDateViewController: UITextField {
+class BirthDateViewController {
     
     @IBOutlet weak var birthDate: UIDatePicker!
     

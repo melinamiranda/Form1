@@ -19,15 +19,18 @@ struct Person {
 
 class PersonViewController: UIViewController {
     
-    @IBOutlet weak var surnameTextField: UILabel!
-    @IBOutlet weak var nameTextField: UILabel!
-    @IBOutlet weak var birthDate: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var birthDateLabel: UILabel!
+    
+    var finalName = ""
+    var finalSurname = ""
+    var finalBirthDate = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    func passStruct(person: Person){
+        nameLabel.text = finalName
         
     }
     

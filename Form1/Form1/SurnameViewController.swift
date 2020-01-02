@@ -9,14 +9,8 @@
 import Foundation
 import UIKit
 
-class SurnameViewController: UITextField {
-    
-    
-    @IBOutlet weak var surnameTextField: UITextField!
-    func passStruct(person: Person){
+class SurnameViewController {
 
-    
-           
-           
-       }
+    @IBOutlet weak var surnameTextField: UITextField!
+ 
 }

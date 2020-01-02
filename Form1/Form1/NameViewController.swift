@@ -8,17 +8,19 @@
 
 import UIKit
 
-
-
-class NameViewController: UITextField, UITextFieldDelegate {
+class NameViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
-   
-    func saveName(person: Person) {
-            
-            func text(in range: UITextRange) -> String? {
-                   return person.name
-               }
+    var nameText = ""
+    
+    @IBAction func done(_ sender: Any) {
+        self.nameText = nameTextField.text!
+        performSegue(withIdentifier: "NameViewController", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! PersonViewController
+        
+        nvc.finalName = nameText.self
     }
 }
 
