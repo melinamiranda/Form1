@@ -19,7 +19,6 @@ class NameViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! PersonViewController
-        
         nvc.finalName = nameText.self
     }
 }
