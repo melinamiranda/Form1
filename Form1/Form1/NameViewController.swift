@@ -10,12 +10,12 @@ import UIKit
 
 class NameViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "IDsegue" {
             func passPerson(person:Person){
                 var person = person
                 let nvc = segue.destination as! PersonViewController
+                
                 person.name = nameTextField.text!
                 nvc.finalName = person.name
             }

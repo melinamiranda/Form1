@@ -32,6 +32,5 @@ class PersonViewController: UIViewController {
         nameLabel.text = finalName
         surnameLabel.text = finalSurname
         birthDateLabel.text = finalBirthDate
-       
     }
 }
