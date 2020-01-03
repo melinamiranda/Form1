@@ -26,12 +26,12 @@ class PersonViewController: UIViewController {
     var finalName = ""
     var finalSurname = ""
     var finalBirthDate = ""
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         nameLabel.text = finalName
-        
+        surnameLabel.text = finalSurname
+        birthDateLabel.text = finalBirthDate
+       
     }
-    
 }
