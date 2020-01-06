@@ -12,16 +12,17 @@ import UIKit
 class BirthDateViewController: UIViewController{
     
     @IBOutlet weak var birthDate: UIDatePicker!
-    
+    var saveSurname = ""
+    var saveName = ""
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IDsegue" {
-            func passPerson(person:Person){
-                var person = person
-                let nvc = segue.destination as! PersonViewController
-                person.date = birthDate.date
-                let dateformatter = DateFormatter()
-                nvc.finalBirthDate = dateformatter.string(from: person.date)
-                }
+            let nvc = segue.destination as! PersonViewController
+            let dateformatter = DateFormatter()
+            dateformatter.dateStyle = .short
+            nvc.finalBirthDate = dateformatter.string(from: birthDate.date)
+            nvc.finalSurname = saveSurname
+            nvc.finalName = saveName
         }
     }
 }
+

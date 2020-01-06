@@ -8,18 +8,32 @@
 
 import UIKit
 
-class NameViewController: UIViewController {
+class NameViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emptyLabel: UILabel!
+    var name = ""
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if nameTextField.text?.isEmpty ?? true {
+            emptyLabel.text = "Complete with your name"
+            emptyLabel.isHidden = false
+            return false
+        }
+        else{
+            emptyLabel.isHidden = true
+            return true
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "IDsegue" {
-            func passPerson(person:Person){
-                var person = person
-                let nvc = segue.destination as! PersonViewController
-                
-                person.name = nameTextField.text!
-                nvc.finalName = person.name
-            }
+            let nvc = segue.destination as! SurnameViewController
+            name = nameTextField.text!
+            nvc.saveName = name
         }
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
     }
 }
 
