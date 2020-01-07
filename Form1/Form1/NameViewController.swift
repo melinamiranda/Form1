@@ -19,12 +19,12 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if nameTextField.text?.isEmpty ?? true{
+        if nameTextField.text?.isEmpty ?? true {
             emptyLabel.text = "Complete with your name"
             emptyLabel.isHidden = false
             return false
         }
-        else{
+        else {
             emptyLabel.isHidden = true
             return true
         }
@@ -42,7 +42,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
             emptyLabel.text = "Only letters"
             return false
         }
-        else{
+        else {
             nameTextField.clearButtonMode = .always
             nameTextField.clearButtonMode = .whileEditing
             return true
