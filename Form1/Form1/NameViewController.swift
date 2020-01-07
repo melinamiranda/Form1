@@ -13,9 +13,13 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
     var name = ""
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTextField.delegate = self
+    }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if nameTextField.text?.isEmpty ?? true {
+        if nameTextField.text?.isEmpty ?? true{
             emptyLabel.text = "Complete with your name"
             emptyLabel.isHidden = false
             return false
@@ -33,7 +37,16 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         }
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return true
+        let characterSet = CharacterSet.letters
+        if nameTextField.text?.rangeOfCharacter(from: characterSet.inverted) != nil {
+            emptyLabel.text = "Only letters"
+            return false
+        }
+        else{
+            nameTextField.clearButtonMode = .always
+            nameTextField.clearButtonMode = .whileEditing
+            return true
+        }
     }
 }
 
