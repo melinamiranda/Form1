@@ -20,7 +20,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
         surnameTextField.delegate = self
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if surnameTextField.text?.isEmpty ?? true{
+        if surnameTextField.text?.isEmpty == true{
             emptyLabel.text = "Complete with you surname"
             emptyLabel.isHidden = false
             return false
@@ -41,10 +41,9 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
         let characterSet = CharacterSet.letters
         if surnameTextField.text?.rangeOfCharacter(from: characterSet.inverted) != nil {
             emptyLabel.text = "Only letters"
-            return false
+            return true
         }
-        else{
-            surnameTextField.clearButtonMode = .always
+        else {
             surnameTextField.clearButtonMode = .whileEditing
             return true
         }
