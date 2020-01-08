@@ -36,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Name"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1e-DY-5Kg">
@@ -57,7 +57,7 @@
                         <viewLayoutGuide key="safeArea" id="Q4t-0R-GZ1"/>
                     </view>
                     <navigationItem key="navigationItem" id="yS1-9V-5dC">
-                        <barButtonItem key="rightBarButtonItem" title="done" id="Sfy-4M-uGd">
+                        <barButtonItem key="rightBarButtonItem" title="done" image="chevron.right" catalog="system" id="Sfy-4M-uGd">
                             <connections>
                                 <segue destination="YlE-tl-cMd" kind="show" identifier="IDsegue" id="9d3-5R-yjK"/>
                             </connections>
@@ -90,7 +90,7 @@
                                 <rect key="frame" x="57" y="402" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3an-Xf-ivL">
@@ -105,7 +105,7 @@
                         <viewLayoutGuide key="safeArea" id="kjq-qe-I1z"/>
                     </view>
                     <navigationItem key="navigationItem" id="yhW-Jc-4pS">
-                        <barButtonItem key="rightBarButtonItem" title="done" id="WWg-9T-hgb">
+                        <barButtonItem key="rightBarButtonItem" title="done" image="chevron.right" catalog="system" id="WWg-9T-hgb">
                             <connections>
                                 <segue destination="NTv-KQ-btd" kind="show" identifier="IDsegue" id="mUe-rx-qPd"/>
                             </connections>
@@ -137,7 +137,7 @@
                         <viewLayoutGuide key="safeArea" id="bsZ-pW-BZN"/>
                     </view>
                     <navigationItem key="navigationItem" id="OdP-EB-gOc">
-                        <barButtonItem key="rightBarButtonItem" title="done" id="qC1-Y5-XaL">
+                        <barButtonItem key="rightBarButtonItem" title="done" image="chevron.right" catalog="system" id="qC1-Y5-XaL">
                             <connections>
                                 <segue destination="kXP-5R-hR8" kind="show" identifier="IDsegue" id="wxb-2o-RPc"/>
                             </connections>
@@ -196,4 +196,7 @@
             <point key="canvasLocation" x="-3490" y="-250"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+    </resources>
 </document>
