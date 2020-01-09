@@ -18,9 +18,16 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         surnameTextField.delegate = self
+        surnameTextField.clearButtonMode = .whileEditing
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if surnameTextField.text?.isEmpty == true{
+        let characterSet = CharacterSet.letters
+
+        if surnameTextField.text?.rangeOfCharacter(from: characterSet.inverted) != nil {
+            emptyLabel.text = "Only letters"
+            return false
+            }
+        else if surnameTextField.text?.isEmpty == true{
             emptyLabel.text = "Complete with you surname"
             emptyLabel.isHidden = false
             return false
@@ -37,7 +44,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
             nvc.saveName = saveName
         }
     }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    /*func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let characterSet = CharacterSet.letters
         if surnameTextField.text?.rangeOfCharacter(from: characterSet.inverted) != nil {
             emptyLabel.text = "Only letters"
@@ -47,7 +54,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
             surnameTextField.clearButtonMode = .whileEditing
             return true
         }
-    }
+    }*/
 }
 
 
