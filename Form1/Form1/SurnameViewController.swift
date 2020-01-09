@@ -22,7 +22,6 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let characterSet = CharacterSet.letters
-
         if surnameTextField.text?.rangeOfCharacter(from: characterSet.inverted) != nil {
             emptyLabel.text = "Only letters"
             return false
