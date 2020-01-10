@@ -13,7 +13,7 @@ class SurnameViewController: UIViewController {
     
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
-    var saveName = ""
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,8 @@ class SurnameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IDsegue" {
             let bvc = segue.destination as! BirthDateViewController
-            bvc.saveName = saveName
-            bvc.saveSurname = surnameTextField.text!
+            person.surname = surnameTextField.text
+            bvc.person = person
         }
     }
 }

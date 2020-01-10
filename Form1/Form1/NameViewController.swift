@@ -9,14 +9,16 @@
 import UIKit
 
 struct Person {
-    var name: String
-    var surname: String
-    var date: Date
+    var name: String!
+    var surname: String!
+    var date: Date!
 }
 class NameViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
+    let pvc = PersonViewController()
+    var person = Person()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +44,8 @@ class NameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "IDsegue" {
             let nvc = segue.destination as! SurnameViewController
-            nvc.saveName = nameTextField.text!
+            person.name = nameTextField.text
+            nvc.person = person
         }
     }
 }

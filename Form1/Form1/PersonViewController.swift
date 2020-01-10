@@ -14,14 +14,14 @@ class PersonViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var birthDateLabel: UILabel!
-    var person = [Person]()
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        nameLabel.text = person[0].name
-        surnameLabel.text = person[0].surname
-        birthDateLabel.text = dateFormatter.string(from: person[0].date)
+        nameLabel.text = person.name
+        surnameLabel.text = person.surname
+        birthDateLabel.text = dateFormatter.string(from: person.date)
         }
 }
