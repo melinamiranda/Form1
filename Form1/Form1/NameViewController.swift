@@ -6,6 +6,7 @@
 //  Copyright © 2019 Melina Miranda. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 struct Person {

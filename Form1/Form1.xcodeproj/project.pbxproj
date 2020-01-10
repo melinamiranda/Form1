@@ -16,6 +16,7 @@
 		FFCA8A2D23BA3C9F00E76FC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCA8A2B23BA3C9F00E76FC2 /* LaunchScreen.storyboard */; };
 		FFCA8A3523BA463F00E76FC2 /* SurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA8A3423BA463F00E76FC2 /* SurnameViewController.swift */; };
 		FFCA8A3923BA4ED500E76FC2 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA8A3823BA4ED500E76FC2 /* NameViewController.swift */; };
+		FFE34DFC23C90D5D00977C34 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE34DFB23C90D5D00977C34 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FFCA8A2E23BA3C9F00E76FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFCA8A3423BA463F00E76FC2 /* SurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurnameViewController.swift; sourceTree = "<group>"; };
 		FFCA8A3823BA4ED500E76FC2 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		FFE34DFB23C90D5D00977C34 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				FFCA8A2023BA3C9F00E76FC2 /* AppDelegate.swift */,
 				FFCA8A2223BA3C9F00E76FC2 /* SceneDelegate.swift */,
+				FFE34DFB23C90D5D00977C34 /* PhotoViewController.swift */,
 				FFCA8A3823BA4ED500E76FC2 /* NameViewController.swift */,
 				FFCA8A3423BA463F00E76FC2 /* SurnameViewController.swift */,
 				FFA0957523BA6D9300E74FA6 /* BirthDateViewController.swift */,
@@ -151,6 +154,7 @@
 				FFA0957823BA705A00E74FA6 /* PersonViewController.swift in Sources */,
 				FFCA8A2123BA3C9F00E76FC2 /* AppDelegate.swift in Sources */,
 				FFCA8A2323BA3C9F00E76FC2 /* SceneDelegate.swift in Sources */,
+				FFE34DFC23C90D5D00977C34 /* PhotoViewController.swift in Sources */,
 				FFCA8A3923BA4ED500E76FC2 /* NameViewController.swift in Sources */,
 				FFA0957623BA6D9300E74FA6 /* BirthDateViewController.swift in Sources */,
 			);
