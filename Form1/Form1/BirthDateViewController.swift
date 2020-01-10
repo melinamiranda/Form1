@@ -10,18 +10,19 @@ import Foundation
 import UIKit
 
 class BirthDateViewController: UIViewController{
-    
     @IBOutlet weak var birthDate: UIDatePicker!
-    var saveSurname = ""
     var saveName = ""
+    var saveSurname = ""
+    override func viewDidLoad() {
+        super.viewDidLoad()
+     
+        }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IDsegue" {
-            let nvc = segue.destination as! PersonViewController
-            let dateformatter = DateFormatter()
-            dateformatter.dateStyle = .short
-            nvc.finalBirthDate = dateformatter.string(from: birthDate.date)
-            nvc.finalSurname = saveSurname
-            nvc.finalName = saveName
+            let pvc = segue.destination as! PersonViewController
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .short
+            pvc.person = [Person(name: saveName, surname: saveSurname, date: birthDate.date)]
         }
     }
 }

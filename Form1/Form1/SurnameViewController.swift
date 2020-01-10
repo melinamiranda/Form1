@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class SurnameViewController: UIViewController, UITextFieldDelegate {
+class SurnameViewController: UIViewController {
     
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
+    let bvc = BirthDateViewController()
     var saveName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        surnameTextField.delegate = self
         surnameTextField.clearButtonMode = .whileEditing
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -36,24 +36,16 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IDsegue" {
-            let nvc = segue.destination as! BirthDateViewController
-            nvc.saveSurname = surnameTextField.text!
-            nvc.saveName = saveName
+            let bvc = segue.destination as! BirthDateViewController
+            bvc.saveName = saveName
+            bvc.saveSurname = surnameTextField.text!
+            
         }
     }
-    /*func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let characterSet = CharacterSet.letters
-        if surnameTextField.text?.rangeOfCharacter(from: characterSet.inverted) != nil {
-            emptyLabel.text = "Only letters"
-            return true
-        }
-        else {
-            surnameTextField.clearButtonMode = .whileEditing
-            return true
-        }
-    }*/
+
 }
 
 
