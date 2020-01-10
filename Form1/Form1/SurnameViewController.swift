@@ -13,7 +13,6 @@ class SurnameViewController: UIViewController {
     
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
-    let bvc = BirthDateViewController()
     var saveName = ""
     
     override func viewDidLoad() {

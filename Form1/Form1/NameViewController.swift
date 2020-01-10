@@ -17,7 +17,6 @@ class NameViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
-    let svc = SurnameViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,6 @@ class NameViewController: UIViewController {
             return false
         }
         else {
-            svc.saveName = nameTextField.text!
             emptyLabel.isHidden = true
             return true
             }
