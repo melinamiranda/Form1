@@ -42,10 +42,8 @@ class SurnameViewController: UIViewController {
             let bvc = segue.destination as! BirthDateViewController
             bvc.saveName = saveName
             bvc.saveSurname = surnameTextField.text!
-            
         }
     }
-
 }
 
 

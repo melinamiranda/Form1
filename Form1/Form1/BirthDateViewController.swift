@@ -13,10 +13,7 @@ class BirthDateViewController: UIViewController{
     @IBOutlet weak var birthDate: UIDatePicker!
     var saveName = ""
     var saveSurname = ""
-    override func viewDidLoad() {
-        super.viewDidLoad()
-     
-        }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IDsegue" {
             let pvc = segue.destination as! PersonViewController
