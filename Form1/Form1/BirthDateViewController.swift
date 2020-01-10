@@ -12,6 +12,7 @@ import UIKit
 class BirthDateViewController: UIViewController{
     @IBOutlet weak var birthDate: UIDatePicker!
     var person: Person!
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IDsegue" {
             let pvc = segue.destination as! PersonViewController
@@ -20,7 +21,6 @@ class BirthDateViewController: UIViewController{
             person.date = birthDate.date
             pvc.person = person
         }
-        
     }
 }
 
