@@ -13,6 +13,7 @@ class SurnameViewController: UIViewController {
     
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
+    var imagePicked: UIImage!
     var person: Person!
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class SurnameViewController: UIViewController {
             let bvc = segue.destination as! BirthDateViewController
             person.surname = surnameTextField.text
             bvc.person = person
+            bvc.imagePicked = imagePicked
         }
     }
 }

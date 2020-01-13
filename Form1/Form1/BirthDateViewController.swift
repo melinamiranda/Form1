@@ -11,6 +11,7 @@ import UIKit
 
 class BirthDateViewController: UIViewController{
     @IBOutlet weak var birthDate: UIDatePicker!
+    var imagePicked: UIImage!
     var person: Person!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -20,6 +21,7 @@ class BirthDateViewController: UIViewController{
             dateFormatter.dateStyle = .short
             person.date = birthDate.date
             pvc.person = person
+            pvc.imagePicked = imagePicked
         }
     }
 }

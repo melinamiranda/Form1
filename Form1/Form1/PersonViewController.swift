@@ -14,6 +14,8 @@ class PersonViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var birthDateLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    var imagePicked: UIImage!
     var person: Person!
     
     override func viewDidLoad() {
@@ -23,5 +25,6 @@ class PersonViewController: UIViewController {
         nameLabel.text = person.name
         surnameLabel.text = person.surname
         birthDateLabel.text = dateFormatter.string(from: person.date)
+        imageView.image = imagePicked
         }
 }

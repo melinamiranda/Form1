@@ -18,6 +18,7 @@ class NameViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emptyLabel: UILabel!
+    var imagePicked: UIImage!
     let pvc = PersonViewController()
     var person = Person()
     
@@ -47,6 +48,7 @@ class NameViewController: UIViewController {
             let nvc = segue.destination as! SurnameViewController
             person.name = nameTextField.text
             nvc.person = person
+            nvc.imagePicked = imagePicked
         }
     }
 }
