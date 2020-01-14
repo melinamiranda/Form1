@@ -28,6 +28,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if imageView.image != nil {
+            emptyPhoto.isHidden = true
             return true
         }
         else {
