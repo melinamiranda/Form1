@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Photos
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var emptyPhoto: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -17,11 +17,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         pickerController.sourceType = .photoLibrary
         pickerController.delegate = self
         pickerController.allowsEditing = true
-        
+        let photo = PHPhotoLibrary.authorizationStatus()
+        PHPhotoLibrary.requestAuthorization(){ photo  in}
+        if photo == .authorized {
         present(pickerController, animated: true, completion: nil)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        }
+        else{
+            emptyPhoto.text = "We need access to your Gallery"
+        }
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if imageView.image != nil {
@@ -49,3 +52,4 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
   
 }
+
